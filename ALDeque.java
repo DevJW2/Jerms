@@ -1,3 +1,11 @@
+//Team Jerms
+//Jeffrey Weng, Matteo Wong, Ricky Chen
+//APCS2 - pd3
+//LAB#02 -- All Hands on Deque!
+//2017-03-31
+
+
+
 import java.util.ArrayList;
 
 public class ALDeque<T> implements Deque<T> {
@@ -43,4 +51,44 @@ public class ALDeque<T> implements Deque<T> {
     public String toString(){
 	return _deque.toString();
     }
+
+     public static void main( String[] args ) 
+    {
+	  Deque<String> ALDe = new ALDeque<String>();
+
+	  System.out.println("\nnow adding thrice..."); 
+	  ALDe.addLast("Al");
+	  ALDe.addLast("B.");
+	  ALDe.addLast("Sure!");
+
+	  System.out.println("\nnow testing toString()..."); 
+	  System.out.println( ALDe ); //for testing toString()...
+
+	  System.out.println("\nnow dequeuing thrice...from the end.."); 
+	  System.out.println( ALDe.pollLast() );
+	  System.out.println( ALDe.pollLast() );
+	  System.out.println( ALDe.pollLast() );
+
+	  
+	  System.out.println("\nnow printing out queue..."); 
+	  System.out.println( ALDe ); //for testing toString()...
+
+	  System.out.println("\nnow adding thrice... ");
+	  ALDe.addLast("Matteo");
+	  ALDe.addLast("Jeffrey.");
+	  ALDe.addLast("Ricky!");
+	  
+	  System.out.println("\nnow printing out queue..."); 
+	  System.out.println( ALDe ); //for testing toString()...
+
+	  
+	  System.out.println("\nnow dequeuing thrice..."); 
+	  System.out.println( ALDe.pollFirst());
+	  System.out.println( ALDe.pollFirst() );
+	  System.out.println( ALDe.pollFirst() );
+
+
+	  System.out.println("\nDequeuing from empty queue should yield null..."); 
+	  System.out.println( ALDe.pollLast() );
+}
 }
