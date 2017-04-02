@@ -2,7 +2,7 @@ public interface Deque<T> {
 
     void addLast(T val);
 
-    T peekLast(T val);
+    T peekLast();
 
     T pollFirst();
 

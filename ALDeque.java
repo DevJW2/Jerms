@@ -20,7 +20,7 @@ public class ALDeque<T> implements Deque<T> {
 	_deque.add(val);
     }
 
-    public T peekLast(T val){
+    public T peekLast(){
 	return _deque.get(size()-1);
     }
 
