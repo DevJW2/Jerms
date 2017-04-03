@@ -12,32 +12,36 @@ public class ALDeque<T> implements Deque<T> {
 
     private ArrayList<T> _deque;
 
+    //Default Constructor
+    //initializes an empty ArrayList of T type
     public ALDeque(){
 	_deque=new ArrayList<T>();//.get(0)=front .get(size-1)=end
     }
 
     public void addLast(T val){
-	_deque.add(val);
+	_deque.add(val); //add with no index adds to the end of the list
     }
 
+    //throws error if _deque is empty
     public T peekLast(){
-	return _deque.get(size()-1);
+	return _deque.get(size()-1); //_deque.size() - 1 is the last index
+    }
+
+    //throws error if _deque is empty
+    public T peekFirst(){
+	return _deque.get(0);
     }
 
     public T pollFirst(){
-	if (isEmpty())
+	if (isEmpty()) //if an empty ArrayList calls remove, an error will be thrown
 	    return null;
 	return _deque.remove(0);
     }
 
     public T pollLast(){
-	if (isEmpty())
+	if (isEmpty()) //if an empty ArrayList calls remove, an error will be thrown
 	    return null;
 	return _deque.remove(size()-1);
-    }
-
-    public T peekFirst(){
-	return _deque.get(0);
     }
 
     public boolean isEmpty(){
@@ -49,7 +53,7 @@ public class ALDeque<T> implements Deque<T> {
     }
     
     public String toString(){
-	return _deque.toString();
+	return _deque.toString(); //Use ArrayList's toString
     }
 
      public static void main( String[] args ) 
