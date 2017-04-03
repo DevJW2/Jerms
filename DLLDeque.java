@@ -11,29 +11,36 @@ public class DLLDeque<T> implements Deque<T>{
     private DLLNode<T> _head, _tail;
     private int _size;
 
+    //constructor
+    //initializes everything as null or 0
     public DLLDeque(){
 	_head=_tail=null;
+	_size=0;
     }
     
+    //addLast
+    //pre con: takes Object of type T
+    //post con: adds to _tail
     public void addLast(T val){
-	if (isEmpty())
+	if (isEmpty())//if empty create a new one
 	    _tail=_head=new DLLNode<T>(val, null, null);
-	else if (_size==1) {
-	    _tail.setNext(new DLLNode<T>(val, null, _head));
-	    _tail=_tail.getNext();
-	    _head.setNext(_tail);
-	}
-	else {
+	else {//otherwise add to tail and update tail
 	    _tail.setNext(new DLLNode<T>(val, null, _tail));
 	    _tail=_tail.getNext();
+	    if (size()==1)//need to make sure head points to something
+		_head.setNext(_tail);
 	}
 	_size+=1;
     }
 
+    //precon: n/a
+    //postcon: returns last
+    //error if empty
     public T peekLast(){
 	return _tail.getCargo();
     }
 
+    //returns and removes first item, null if empty
     public T pollFirst(){
 	if (isEmpty())
 	    return null;
@@ -49,6 +56,7 @@ public class DLLDeque<T> implements Deque<T>{
 	return ret;
     }
 
+    //returns and removes from tail, null if empty
     public T pollLast(){
 	if (isEmpty())
 	    return null;
@@ -63,6 +71,7 @@ public class DLLDeque<T> implements Deque<T>{
 	return ret;
     }
     
+    //look at head, error if null, dont remove
     public T peekFirst(){
 	return _head.getCargo();
     }
