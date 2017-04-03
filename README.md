@@ -1,5 +1,7 @@
 # Jerms
 
+Jeffrey Weng, Matteo Wong, Rickey Chen | Period 3
+
 ## Description
 
 A double-ended queue(a **Deque**), able to dequeue from the front of the queue and the end of the queue
