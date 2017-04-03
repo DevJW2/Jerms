@@ -12,7 +12,7 @@ We used both an **ArrayList-based** and a **doubly-linked node-based** architect
 ```java
 public void addLast(T val);
 
-public T peekLast(T val);
+public T peekLast();
 
 public T pollFirst();
 
@@ -23,6 +23,8 @@ public T peekFirst();
 public boolean isEmpty();
    
 public int size();
+
+public boolean contains(T val);
 
 ```
 
