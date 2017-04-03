@@ -83,6 +83,16 @@ public class DLLDeque<T> implements Deque<T>{
     public int size(){
 	return _size;
     }
+
+    public boolean contains(T val){
+	DLLNode<T> holder = _head;
+	for(int i = 0; i < _size; i++){
+	    if (holder.getCargo().equals(val))
+		return true;
+	    holder = holder.getNext();
+	}
+	return false;
+    }
     
     public String toString(){
 	String ret="FRONT<-";
@@ -128,6 +138,10 @@ public class DLLDeque<T> implements Deque<T>{
 	  
 	System.out.println("\nnow printing out queue..."); 
 	System.out.println( ALDe ); //for testing toString()...
+
+	System.out.println("\nchecking contains method"); 
+	System.out.println( ALDe.contains("Matteo"));
+	System.out.println( ALDe.contains("fool"));
 
 	  
 	System.out.println("\nnow dequeuing thrice..."); 

@@ -14,5 +14,7 @@ public interface Deque<T> {
 
     int size();
 
+    boolean contains(T val);
+
 
 }

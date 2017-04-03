@@ -56,43 +56,55 @@ public class ALDeque<T> implements Deque<T> {
 	return _deque.toString(); //Use ArrayList's toString
     }
 
-     public static void main( String[] args ) 
+    public boolean contains(T val){
+	for(int i = 0; i < size(); i++){
+	    if (_deque.get(i).equals(val))
+		return true;
+	}
+	return false;
+    }
+
+    public static void main( String[] args ) 
     {
-	  Deque<String> ALDe = new ALDeque<String>();
+	Deque<String> ALDe = new ALDeque<String>();
 
-	  System.out.println("\nnow adding thrice..."); 
-	  ALDe.addLast("Al");
-	  ALDe.addLast("B.");
-	  ALDe.addLast("Sure!");
+	System.out.println("\nnow adding thrice..."); 
+	ALDe.addLast("Al");
+	ALDe.addLast("B.");
+	ALDe.addLast("Sure!");
 
-	  System.out.println("\nnow testing toString()..."); 
-	  System.out.println( ALDe ); //for testing toString()...
+	System.out.println("\nnow testing toString()..."); 
+	System.out.println( ALDe ); //for testing toString()...
 
-	  System.out.println("\nnow dequeuing thrice...from the end.."); 
-	  System.out.println( ALDe.pollLast() );
-	  System.out.println( ALDe.pollLast() );
-	  System.out.println( ALDe.pollLast() );
-
-	  
-	  System.out.println("\nnow printing out queue..."); 
-	  System.out.println( ALDe ); //for testing toString()...
-
-	  System.out.println("\nnow adding thrice... ");
-	  ALDe.addLast("Matteo");
-	  ALDe.addLast("Jeffrey.");
-	  ALDe.addLast("Ricky!");
-	  
-	  System.out.println("\nnow printing out queue..."); 
-	  System.out.println( ALDe ); //for testing toString()...
+	System.out.println("\nnow dequeuing thrice...from the end.."); 
+	System.out.println( ALDe.pollLast() );
+	System.out.println( ALDe.pollLast() );
+	System.out.println( ALDe.pollLast() );
 
 	  
-	  System.out.println("\nnow dequeuing thrice..."); 
-	  System.out.println( ALDe.pollFirst());
-	  System.out.println( ALDe.pollFirst() );
-	  System.out.println( ALDe.pollFirst() );
+	System.out.println("\nnow printing out queue..."); 
+	System.out.println( ALDe ); //for testing toString()...
+
+	System.out.println("\nnow adding thrice... ");
+	ALDe.addLast("Matteo");
+	ALDe.addLast("Jeffrey.");
+	ALDe.addLast("Ricky!");
+	  
+	System.out.println("\nnow printing out queue..."); 
+	System.out.println( ALDe ); //for testing toString()...
+
+	System.out.println("\nchecking contains method"); 
+	System.out.println( ALDe.contains("Matteo"));
+	System.out.println( ALDe.contains("fool"));
+
+	  
+	System.out.println("\nnow dequeuing thrice..."); 
+	System.out.println( ALDe.pollFirst());
+	System.out.println( ALDe.pollFirst() );
+	System.out.println( ALDe.pollFirst() );
 
 
-	  System.out.println("\nDequeuing from empty queue should yield null..."); 
-	  System.out.println( ALDe.pollLast() );
-}
+	System.out.println("\nDequeuing from empty queue should yield null..."); 
+	System.out.println( ALDe.pollLast() );
+    }
 }
