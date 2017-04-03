@@ -1,6 +1,6 @@
 # Jerms
 
-Jeffrey Weng, Matteo Wong, Rickey Chen | Period 3
+Jeffrey Weng, Matteo Wong, Ricky Chen | Period 3
 
 ## Description
 
