@@ -24,7 +24,7 @@ public class DequeTester{
 
 	
 	/* ~~~~~~~~~ Robustness Test of toString
-	   Should print 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
+	   Should print 012345678901234567890123456789
 	   Checks if your Deque can have Deques
 	   ~~~~~~~~~ */
 	Deque OfWhat = new DLLDeque();
