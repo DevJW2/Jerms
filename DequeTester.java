@@ -1,5 +1,6 @@
 /*~~~~~~~~~~~
-  Yuanchu Liu (Leo)
+  FromWhat
+  Yuanchu Liu (Leo) & Nikolas Cruz-Marsted
   APCS2 pd 3
   hw29 -- Stress is the Best
   2017-04-04
