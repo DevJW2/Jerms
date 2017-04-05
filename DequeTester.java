@@ -14,10 +14,11 @@ public class DequeTester{
 	ada.addLast("Cal");
 	ada.addLast("Tim");
 	ada.addLast("Zoe");
+	System.out.println(ada);
 	System.out.println(ada.pollFirst());//Bob
-	System.out.println(ada.pollFirst());//Cal
-	System.out.println(ada.peekFirst());//Tim
-	System.out.println(ada.pollFirst());//Tim
+	System.out.println(ada.peekFirst());//Cal
+	System.out.println(ada.pollLast());//Zoe
+	System.out.println(ada.peekLast());//Tim
 
 
 	
