@@ -9,6 +9,9 @@ A double-ended queue(a **Deque**), able to dequeue from the front of the queue a
 ## Implementation
 
 We used both an **ArrayList-based** and a **doubly-linked node-based** architecture.
+Also using two driver classes implemented by other teams to test our methods:
+*DequeTesterGustavus.java*
+*DequeTesterWhat.java*
 
 ### Methods used
 ```java
